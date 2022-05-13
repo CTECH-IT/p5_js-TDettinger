@@ -1,13 +1,16 @@
 class MyLine {
-    constructor () {
+    constructor (penColor, penWidth) {
         this.px = pwinMouseX;
         this.py = pwinMouseY;
         this.x = winMouseX;
         this.y = winMouseY;
+
+        this.penColor = penColor
+        this.penWidth = penWidth
     }
 
     show () {
-        stroke(225);
+        stroke(penColor, penWidth);
         line(this.px, this.py, this.x, this.y);
 
     }
