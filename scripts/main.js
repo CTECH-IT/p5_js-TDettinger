@@ -1,16 +1,21 @@
 var lines = []
-var penColor
-var bgColor
-var penWidth
+let penColor
+let bgColor
+let penWidth
+var clearBut
 
 
 function setup() {
-   // let dC = drawingContext;
+    let dC = drawingContext;
 
-    let myCanvas = createCanvas(600, 800);
-   // myCanvas.parent('myContainer');
+    createCanvas(600, 800);
 
-    var options = createDiv().style('display: flex')
+    penWidth = createInput('')
+    bgColor = createInput('')
+    penColor = createInput('')
+    
+
+    var options = createDiv().style('display: flex; margin-left: 30px')
 
     var optionsTitles = createDiv().parent(options)
     createP('Pen Color').parent(optionsTitles)
@@ -19,30 +24,36 @@ function setup() {
 
     var optionsValues = createDiv().parent(options).style('margin: 10px, 40px; width; 30px')
     penColor = createColorPicker('ffffff').parent(optionsValues)
-    bgPicker = createColorPicker('#1e1e1e').parent(optionsValues).style('margin-top: 10px')
-    penWidth = createSelect(false).parent(optionsValues).style('margin-top: 10px')
+    bgColor = createColorPicker('#1e1e1e').parent(optionsValues).style
+    ('margin-top: 10px')
+    penWidth = createSelect(false).parent(optionsValues).style
+    ('margin-top: 10px')
     penWidth.option('1')
     penWidth.option('2')
-    penWidth.option('3')
     penWidth.option('4')
+    penWidth.option('8')
     penWidth.selected('2')
 
 
-
+    clearBut = createButton('clear').parent(options).style('width: 100px')
 }
 
 
 function draw() {
-    background(bgColor.value());
+    background(bgColor.value())
 
-    if(mouseIsPressed) {
-        var line = new MyLine(penColor.value().penWidth.value());
+    clearBut.mousePressed(function() {
+        lines = []
+    })
+
+    if (mouseIsPressed) {
+        var line = new MyLine(penColor.value().penWidth.value())
         lines.push(line);
 
     }
 
     for (var line of lines) {
-        line.show();
+        line.show()
 
     }
 

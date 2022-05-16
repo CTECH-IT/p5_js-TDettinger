@@ -11,6 +11,7 @@ class MyLine {
 
     show () {
         stroke(penColor, penWidth);
+        strokeWeight(this.penWidth);
         line(this.px, this.py, this.x, this.y);
 
     }
