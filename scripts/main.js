@@ -4,30 +4,20 @@ let bgColor
 let penWidth
 var clearBut
 
-
 function setup() {
-    let dC = drawingContext;
-
     createCanvas(600, 800);
-
-    penWidth = createInput('')
-    bgColor = createInput('')
-    penColor = createInput('')
-    
 
     var options = createDiv().style('display: flex; margin-left: 30px')
 
     var optionsTitles = createDiv().parent(options)
     createP('Pen Color').parent(optionsTitles)
-    createP('background Color').parent(optionsTitles)
-    createP('pen Witdth').parent(optionsTitles)
+    createP('Background Color').parent(optionsTitles)
+    createP('Pen Witdth').parent(optionsTitles)
 
-    var optionsValues = createDiv().parent(options).style('margin: 10px, 40px; width; 30px')
-    penColor = createColorPicker('ffffff').parent(optionsValues)
-    bgColor = createColorPicker('#1e1e1e').parent(optionsValues).style
-    ('margin-top: 10px')
-    penWidth = createSelect(false).parent(optionsValues).style
-    ('margin-top: 10px')
+    var optionsValues = createDiv().parent(options).style('margin: 10px 40px; width: 30px')
+    penColor = createColorPicker('#ffffff').parent(optionsValues)
+    bgColor = createColorPicker('#1e1e1e').parent(optionsValues).style('margin-top: 10px')
+    penWidth = createSelect(false).parent(optionsValues).style('margin-top: 10px')
     penWidth.option('1')
     penWidth.option('2')
     penWidth.option('4')
@@ -42,12 +32,12 @@ function setup() {
 function draw() {
     background(bgColor.value())
 
-    clearBut.mousePressed(function() {
+    clearBut.mousePressed(function () {
         lines = []
     })
 
     if (mouseIsPressed) {
-        var line = new MyLine(penColor.value().penWidth.value())
+        var line = new MyLine(penColor.value(), penWidth.value())
         lines.push(line);
 
     }
