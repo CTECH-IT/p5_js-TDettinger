@@ -1,1 +1,13 @@
-/* Put your CSS here */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.options {
+    flex: 1 1 auto;
+}

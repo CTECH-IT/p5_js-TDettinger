@@ -28,7 +28,6 @@ function setup() {
     clearBut = createButton('clear').parent(options).style('width: 100px')
 }
 
-
 function draw() {
     background(bgColor.value())
 
