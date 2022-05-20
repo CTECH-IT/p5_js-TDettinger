@@ -3,6 +3,7 @@ let penColor
 let bgColor
 let penWidth
 var clearBut
+var checkbox
 
 function setup() {
     createCanvas(600, 800);
@@ -13,6 +14,7 @@ function setup() {
     createP('Pen Color').parent(optionsTitles)
     createP('Background Color').parent(optionsTitles)
     createP('Pen Witdth').parent(optionsTitles)
+    createP('Eraser').parent(optionsTitles)
 
     var optionsValues = createDiv().parent(options).style('margin: 10px 40px; width: 30px')
     penColor = createColorPicker('#ffffff').parent(optionsValues)
@@ -24,6 +26,8 @@ function setup() {
     penWidth.option('8')
     penWidth.selected('2')
 
+    checkbox = createCheckbox('',false).parent(optionsValues).style('margin-top: 10px')
+    //checkbox.changed(checkbox)
 
     clearBut = createButton('clear').parent(options).style('width: 100px')
 }
@@ -46,4 +50,17 @@ function draw() {
 
     }
 
+    if (checkbox.checked()) {
+        penColor = bgColor //pen will appear to be erasing
+        line.show
+    }
+    else {
+        penColor = penColor
+        line.show
+    }
+
+}
+
+function myEraser() {
+   
 }

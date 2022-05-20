@@ -12,7 +12,7 @@ class MyLine {
     show () {
         stroke(this.penColor);
         strokeWeight(this.penWidth);
-        line(this.px, this.py + 170, this.x, this.y + 170);
+        line(this.px, this.py + 230, this.x, this.y + 230);
 
     }
 }
