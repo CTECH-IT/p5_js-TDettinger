@@ -34,6 +34,7 @@ function setup() {
 
 function draw() {
     background(bgColor.value())
+    myEraser()
 
     clearBut.mousePressed(function () {
         lines = []
@@ -49,7 +50,8 @@ function draw() {
         line.show()
 
     }
-
+}
+function myEraser() {
     if (checkbox.checked()) {
         penColor = bgColor //pen will appear to be erasing
         line.show
@@ -58,9 +60,5 @@ function draw() {
         penColor = penColor
         line.show
     }
-
 }
 
-function myEraser() {
-   
-}
