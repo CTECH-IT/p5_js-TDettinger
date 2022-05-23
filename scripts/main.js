@@ -6,7 +6,7 @@ var clearBut
 var checkbox
 
 function setup() {
-    createCanvas(600, 800);
+    createCanvas(windowWidth+100, windowHeight+100);
 
     var options = createDiv().style('display: flex; margin-left: 30px')
 
@@ -51,9 +51,12 @@ function draw() {
 
     }
 }
+
+
 function myEraser() {
     if (checkbox.checked()) {
         penColor = bgColor //pen will appear to be erasing
+        penWidth.value('8')
         line.show
     }
     else {

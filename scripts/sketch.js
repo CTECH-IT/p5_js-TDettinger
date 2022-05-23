@@ -12,7 +12,8 @@ class MyLine {
     show () {
         stroke(this.penColor);
         strokeWeight(this.penWidth);
-        line(this.px, this.py + 230, this.x, this.y + 230);
+        line(this.px, this.py , this.x, this.y );
 
     }
+    frameRate()
 }
