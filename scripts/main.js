@@ -6,7 +6,9 @@ var clearBut
 var checkbox
 
 function setup() {
-    createCanvas(windowWidth+100, windowHeight+100);
+    createCanvas ( 500, 500)
+    
+    
 
     var options = createDiv().style('display: flex; margin-left: 30px')
 

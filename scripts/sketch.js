@@ -2,8 +2,8 @@ class MyLine {
     constructor (penColor, penWidth) {
         this.px = pwinMouseX;
         this.py = pwinMouseY;
-        this.x = winMouseX;
-        this.y = winMouseY;
+        this.x = mouseX;
+        this.y = mouseY;
 
         this.penColor = penColor
         this.penWidth = penWidth
@@ -15,5 +15,5 @@ class MyLine {
         line(this.px, this.py , this.x, this.y );
 
     }
-    frameRate()
+    //frameRate()
 }

@@ -22,16 +22,41 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="stylesheet" href="stylesheets/styles.css">
 </head>
-
-<body>
-  <header>
-    <h1 class="page-title">Drawing Tools</h1>
-    <p></p>
-  </header>
-
+</body>
 
   <script src="scripts/main.js"></script>
   <script src="scripts/sketch.js"></script>
 </body>
+
+<body>
+ <!-- <header>
+    <h1 class="page-title">Drawing Tools</h1>
+    <p></p>
+  </header>
+-->
+
+<p class="scrollable-place">
+  <button onclick="disableScroll()">Disable Scrolling</button>
+</p>
+
+<script>
+  function disableScroll() {
+      // Get the current page scroll position
+      scrollTop = 
+        window.pageYOffset || document.documentElement.scrollTop;
+      scrollLeft = 
+        window.pageXOffset || document.documentElement.scrollLeft,
+
+          // if any scroll is attempted,
+          // set this to the previous value
+          window.onscroll = function() {
+              window.scrollTo(scrollLeft, scrollTop);
+          };
+  }
+
+
+</script>
+
+
 
 </html>
