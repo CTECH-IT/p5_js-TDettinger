@@ -10,15 +10,16 @@ function setup() {
     
     
 
-    var options = createDiv().style('display: flex; margin-left: 30px')
+    var options = createDiv().style('display: flex; margin-left: 30px; margin-top: 50px')
 
     var optionsTitles = createDiv().parent(options)
+    document.createTextNode("Test")
     createP('Pen Color').parent(optionsTitles)
     createP('Background Color').parent(optionsTitles)
     createP('Pen Witdth').parent(optionsTitles)
     createP('Eraser').parent(optionsTitles)
 
-    var optionsValues = createDiv().parent(options).style('margin: 10px 40px; width: 30px')
+    var optionsValues = createDiv().parent(options).style('margin: 15px 40px; width: 30px')
     penColor = createColorPicker('#ffffff').parent(optionsValues)
     bgColor = createColorPicker('#1e1e1e').parent(optionsValues).style('margin-top: 10px')
     penWidth = createSelect(false).parent(optionsValues).style('margin-top: 10px')
@@ -31,7 +32,7 @@ function setup() {
     checkbox = createCheckbox('',false).parent(optionsValues).style('margin-top: 10px')
     //checkbox.changed(checkbox)
 
-    clearBut = createButton('clear').parent(options).style('width: 100px')
+    clearBut = createButton('clear').parent(options).style('width: 100px; height: 200px')
 }
 
 function draw() {
