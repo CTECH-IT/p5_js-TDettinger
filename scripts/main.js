@@ -20,6 +20,7 @@ function setup() {
     createP('Background Color').parent(optionsTitles)
     createP('Pen Witdth').parent(optionsTitles)
     createP('Eraser').parent(optionsTitles)
+    createP('Screenshot').parent(optionsTitles)
 
     var optionsValues = createDiv().parent(options).style('margin: 20px 35px; width: 30px')
     penColor = createColorPicker('#ffffff').parent(optionsValues)
@@ -33,6 +34,8 @@ function setup() {
 
     checkbox = createCheckbox('',false).parent(optionsValues).style('margin-top: 10px')
     //checkbox.changed(checkbox)
+
+    screenShotBut = createButton('Take').parent(optionsValues).style('margin-top: 10px')
 
     clearBut = createButton('clear').parent(options).style('width: 100px; height: 200px')
 }
